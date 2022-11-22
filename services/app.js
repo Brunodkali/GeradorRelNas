@@ -11,16 +11,18 @@ button.addEventListener("click", () => {
     acionarPrint();
 });
 
+// Função responsável por alterar e adicionar itens ao display no momento da impressão.
 function displayPrint() {
     const date = new Date().toLocaleString();
     var elems = document.getElementsByClassName('fechar');
-    document.getElementById('horaDia').innerHTML = date;
 
+    document.getElementById('horaDia').innerHTML = date;
     for (let i=0;i<elems.length;i+=1){
         elems[i].style.display = 'none';
     }
 }
 
+// Função responsável por acionar o método de print, gerando uma tela de pré-visualização.
 function acionarPrint() {
     var conteudo = document.getElementById('print').innerHTML;
     var tela_impressao = window.open("", "new div", "height=600,width=800");
@@ -54,7 +56,7 @@ function excluirTarefa() {
     const buttonFechar = document.querySelectorAll(".fechar");
 
     buttonFechar.forEach((_, index) => {
-    buttonFechar[index].onclick = function () {
+    buttonFechar[index].onclick = function() {
         const div = this.parentElement;
 
         div.style.display = "none";
@@ -62,7 +64,7 @@ function excluirTarefa() {
     });
 }
 
-// Função respionsável por marcar/desmarcar a tarefa como feita quando clicar em algum item da lista.
+// Função responsável por marcar/desmarcar a tarefa como feita quando clicar em algum item da lista.
 function marcarTarefa() {
     const todoList = document.querySelector("ul");
 
