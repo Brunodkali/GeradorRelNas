@@ -17,7 +17,8 @@ function displayPrint() {
     var elems = document.getElementsByClassName('fechar');
 
     document.getElementById('horaDia').innerHTML = date;
-    for (let i=0;i<elems.length;i+=1){
+
+    for (let i = 0; i < elems.length; i += 1){
         elems[i].style.display = 'none';
     }
 }
@@ -26,6 +27,7 @@ function displayPrint() {
 function acionarPrint() {
     var conteudo = document.getElementById('print').innerHTML;
     var tela_impressao = window.open("", "new div", "height=600,width=800");
+    var elems = document.getElementsByClassName('fechar');
 
     tela_impressao.document.write("<html><head><title></title>");
     tela_impressao.document.write("<link rel=\"stylesheet\" href=\"../public/css/style.css\" type=\"text/css\"/>");
@@ -34,7 +36,16 @@ function acionarPrint() {
     tela_impressao.document.write("</body></html>");
     tela_impressao.document.close();
     tela_impressao.focus();
-    setTimeout(function(){tela_impressao.print();},1000);
+    
+    setTimeout(function(){ 
+        tela_impressao.print();
+        tela_impressao.close();
+        document.getElementById('horaDia').innerHTML = '';
+
+        for (let i = 0; i < elems.length; i += 1){
+            elems[i].style.display = 'flex';
+        }
+    }, 1000);
 }
 
 // Função responsável por criar os botões para excluir um item da lista de tarefas.

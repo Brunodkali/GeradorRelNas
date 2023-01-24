@@ -1,11 +1,7 @@
 const { app, BrowserWindow, nativeImage } = require("electron");
 
-require("electron-reload")(__dirname, {
-  electron: require(`${__dirname}/node_modules/electron`),
-});
-
 function createWindow() {
-  const icon = nativeImage.createFromPath('./public/img/iconRel.png');
+  const icon = nativeImage.createFromPath('favicon.ico');
 
   if (app.dock) {
     app.dock.setIcon(icon);
