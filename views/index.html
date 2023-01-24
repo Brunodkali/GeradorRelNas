@@ -7,34 +7,34 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="../public/css/style.css">
-      <title>Relatório NAS-LABOR</title>
-
-      <style type="text/css">
-         @import "../fontawesome-free-6.2.0-web/css/all.min.css";
-      </style>
+      <title>Sistema de Geração de Relatórios</title>
 
    </head>
    <body>
-      <div class="geracao">
-         <h2>Geração de relátorio mensal NAS-LABOR UFES</h2>
-         <button id="exportarRel" class="exportarRel"><i class="fa-solid fa-file-arrow-down"></i> Exportar Relatório</button>
-      </div>
-      <div class="card__todo">
-         <h2>Tópicos manutenidos</h2>
-         <input type="text" onkeyup="addNewTodo(event)" id="inputTodo" placeholder="Adicione tópicos a manutenção...">
-         <div onclick="addNewTodo()" class="adc_btn">Adicionar</div>
+      <div class="container">
+         <div class="geracao">
+            <h3>Sistema de Geração de Relatórios</h3>
+            <button id="exportarRel" class="exportarRel"><i class="fa-solid fa-file-pdf"></i> Exportar Relatório</button>
+         </div>
+         <div class="card__todo">
+            <h2>Tópicos manutenidos</h2>
+            <input type="text" onkeyup="addNewTodo(event)" id="inputTodo" placeholder="Adicione tópicos a manutenção...">
+            <div onclick="addNewTodo()" class="adc_btn">Adicionar</div>
+         </div>
+   
+         <div id="print" class="conteudo">
+            <p id='horaDia'></p>
+            <ul id="ulTodo">
+               <li>Verificar integridade dos discos rígidos</li>
+               <li>Verificar atualizações pendentes de pacotes</li>
+               <li>Verificar utilização de memória do sistema</li>
+               <li>Analisar uso de CPU do sistema</li>
+            </ul>
+         </div>
       </div>
 
-      <div id="print" class="conteudo">
-         <p id='horaDia'></p>
-         <ul id="ulTodo">
-            <li>Verificar integridade dos discos rígidos</li>
-            <li>Verificar atualizações pendentes de pacotes</li>
-            <li>Verificar utilização de memória do sistema</li>
-            <li>Analisar uso de CPU do sistema</li>
-         </ul>
-      </div>
+      <!-- Ícones -->
+      <script src="https://kit.fontawesome.com/a9ac96b7ba.js" crossorigin="anonymous"></script>
       <script src="../services/app.js"></script>
-      <script src="../services/exportarRel.js"></script>
    </body>
 </html>

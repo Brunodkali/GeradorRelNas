@@ -72,9 +72,7 @@ function marcarTarefa() {
         if (event.target.tagName === "LI") {
             event.target.classList.toggle("checked");
         }
-    },
-    false
-    );
+    });
 }
 
 
@@ -90,13 +88,8 @@ function addNewTodo(event) {
     if (event && event.keyCode !== 13) {
         return;
     }
-
-    if (inputTodo === "") {
-        document.getElementById("inputTodo").style.border = "1px solid red";
-    }else {
-        document.getElementById("ulTodo").appendChild(li);
-    }
-
+    
+    document.getElementById("ulTodo").appendChild(li);
     document.getElementById("inputTodo").value = "";
     span.className = "fechar";
     span.appendChild(iconeDelete);

@@ -1,3 +1,4 @@
-# GeradorRelNas
+# Gerador de Relatórios
 
-> Gerador de relatórios (PDF) de manutenção em servidor NAS, desenvolvido com ElectronJS, JavaScript, CSS e Html.
+> Pequeno sistema para gerar relatórios simples, referentes a manutenções de servidores (mas que pode ser escalonado). Desenvolvido com ElectronJS, JavaScript, Html e Css.
+> Idealizado para funcionar como executável (Desktop) em ambientes que proporcionam ou não uma conexão de rede.
